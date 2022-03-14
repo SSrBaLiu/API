@@ -1,16 +1,32 @@
-package org.liuep.APIDemo.entities;
+package org.liu.data.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApproveInf {
+@XmlRootElement(name = "approveInf")
+@XmlType(propOrder = {
+        "activityLabel",
+        "activityName",
+        "executor",
+        "executorName",
+        "finished",
+        "id",
+        "opinion",
+        "parentId",
+        "pid",
+        "status",
+        "statusName",
+        "uid"
+})
+public class ApproveInfXml {
     private String activityLabel;
     private String activityName;
     private String executor;

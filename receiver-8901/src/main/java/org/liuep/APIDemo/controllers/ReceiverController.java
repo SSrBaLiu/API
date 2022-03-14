@@ -42,7 +42,7 @@ public class ReceiverController {
         if (examineAndApprove.getApproveInfs().size() > 0){
             stringBuilder.append(examineAndApprove.getApproveInfs().get(0).getUid());
             //往数据库中写入uid对应的approveInf
-            log.info(""+examineAndApprove.getApproveInfs().get(0));
+//            log.info(""+examineAndApprove.getApproveInfs().get(0));
             saveApproveInf(examineAndApprove.getApproveInfs().get(0));
         }
 
@@ -68,7 +68,7 @@ public class ReceiverController {
         if (approveInf == null || approveInf.getUid() == null){
             return -1;
         }
-        log.info("save :"+approveInf);
+//        log.info("save :"+approveInf);
 
         return receiverService.saveApproveInf(approveInf);
     }

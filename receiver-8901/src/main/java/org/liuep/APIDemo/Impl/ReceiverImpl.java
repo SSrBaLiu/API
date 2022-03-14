@@ -1,5 +1,6 @@
 package org.liuep.APIDemo.Impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.liuep.APIDemo.DAO.ReceiverDAO;
 import org.liuep.APIDemo.entities.ApproveInf;
 import org.liuep.APIDemo.entities.ExamineAndApprove;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 @Service
+@Slf4j
 public class ReceiverImpl implements ReceiverService {
 
     @Resource
@@ -17,6 +19,7 @@ public class ReceiverImpl implements ReceiverService {
 
     @Override
     public int saveApproveInf(ApproveInf approveInf) {
+//        log.info("receiverDAO: " + receiverDAO);
         return receiverDAO.saveApproveInf(approveInf);
     }
 
